@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatWorld - Породы кошек</title>
+    <!-- Подключаем Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/cat.png">
+</head>
+<body>
+    <!-- БЛОК 1: Меню -->
+    <header class="header-block">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span>🐱</span> CatWorld
+                </div>
+                <button class="nav-toggle" aria-label="Открыть меню">☰</button>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#breeds">Породы</a></li>
+                        <li><a href="#care">Уход</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- БЛОК 2: Герой-секция -->
+    <section class="hero-block" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Добро пожаловать в мир кошек!</h1>
+                <p>Откройте для себя удивительный мир пушистых друзей. Узнайте о разных породах, особенностях ухода и содержания.</p>
+                <a href="#breeds" class="btn">Узнать больше</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 3: Породы кошек -->
+    <section class="breeds-block" id="breeds">
+        <div class="container">
+            <h2 class="section-title">Популярные породы кошек</h2>
+            <div class="breeds-grid">
+                <!-- 1. Мейн-кун -->
+                <article class="breed-card">
+                    <div class="breed-image">
+                        <img src="https://i.imgur.com/pEdQmqt.jpeg" alt="Мейн-кун">
+                    </div>
+                    <h3>Мейн-кун</h3>
+                    <p>Крупная порода с дружелюбным характером, известная как "нежный гигант" кошачьего мира.</p>
+                    <div class="breed-characteristics">
+                        <div class="characteristic">
+                            <div class="label">Размер</div>
+                            <div class="value">Большой</div>
+                        </div>
+                        <div class="characteristic">
+                            <div class="label">Шерсть</div>
+                            <div class="value">Длинная</div>
+                        </div>
+                        <div class="characteristic">
+                            <div class="label">Активность</div>
+                            <div class="value">Высокая</div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- 2. Британская короткошерстная -->
+                <article class="breed-card">
+                    <div class="breed-image">
+                        <img src="https://i.imgur.com/82uKOJV.jpeg" alt="Британская короткошерстная">
+                    </div>
+                    <h3>Британская короткошерстная</h3>
+                    <p>Спокойная и аристократичная порода с плюшевой шерстью и округлыми формами.</p>
+                    <div class="breed-characteristics">
+                        <div class="characteristic">
+                            <div class="label">Размер</div>
+                            <div class="value">Средний</div>
+                        </div>
+                        <div class="characteristic">
+                            <div class="label">Шерсть</div>
+                            <div class="value">Короткая</div>
+                        </div>
+                        <div class="characteristic">
+                            <div class="label">Активность</div>
+                            <div class="value">Низкая</div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- 3. Сфинкс -->
+                <article class="breed-card">
+                    <div class="breed-image">
+                        <img src="https://i.imgur.com/QSoPJwU.jpeg" alt="Сфинкс">
+                    </div>
+                    <h3>Сфинкс</h3>
+                    <p>Бесшерстная порода с энергичным характером, требующая особого ухода за кожей.</p>
+                    <div class="breed-characteristics">
+                        <div class="characteristic">
+                            <div class="label">Размер</div>
+                            <div class="value">Средний</div>
+                        </div>
+                        <div class="characteristic">
+                            <div class="label">Шерсть</div>
+                            <div class="value">Отсутствует</div>
+                        </div>
+                        <div class="characteristic">
+                            <div class="label">Активность</div>
+                            <div class="value">Очень высокая</div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- 4. Сиамская -->
+                <article class="breed-card">
+                    <div class="breed-image">
+                        <img src="https://i.imgur.com/0o5tCJl.jpeg" alt="Сиамская кошка">
+                    </div>
+                    <h3>Сиамская</h3>
+                    <p>Элегантная и разговорчивая порода с яркими голубыми глазами и контрастным окрасом.</p>
+                    <div class="breed-characteristics">
+                        <div class="characteristic">
+                            <div class="label">Телосложение</div>
+                            <div class="value">Стройный</div>
+                        </div>
+                        <div class="characteristic">
+                            <div class="label">Шерсть</div>
+                            <div class="value">Короткая</div>
+                        </div>
+                        <div class="characteristic">
+                            <div class="label">Общительность</div>
+                            <div class="value">Высокая</div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- 5. Персидская -->
+                <article class="breed-card">
+                    <div class="breed-image">
+                        <img src="https://i.imgur.com/Y7g8bK9.jpeg" alt="Персидская кошка">
+                    </div>
+                    <h3>Персидская</h3>
+                    <p>Роскошная длинношерстная порода со спокойным характером и выразительной мордочкой.</p>
+                    <div class="breed-characteristics">
+                        <div class="characteristic">
+                            <div class="label">Размер</div>
+                            <div class="value">Средний</div>
+                        </div>
+                        <div class="characteristic">
+                            <div class="label">Шерсть</div>
+                            <div class="value">Очень длинная</div>
+                        </div>
+                        <div class="characteristic">
+                            <div class="label">Активность</div>
+                            <div class="value">Низкая</div>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- 6. Шотландская вислоухая -->
+                <article class="breed-card">
+                    <div class="breed-image">
+                        <img src="https://i.imgur.com/9Lm4X2c.jpeg" alt="Шотландская вислоухая">
+                    </div>
+                    <h3>Шотландская вислоухая</h3>
+                    <p>Уникальная порода с загнутыми ушами и милым, "совиным" выражением мордочки.</p>
+                    <div class="breed-characteristics">
+                        <div class="characteristic">
+                            <div class="label">Размер</div>
+                            <div class="value">Средний</div>
+                        </div>
+                        <div class="characteristic">
+                            <div class="label">Шерсть</div>
+                            <div class="value">Короткая/Длинная</div>
+                        </div>
+                        <div class="characteristic">
+                            <div class="label">Активность</div>
+                            <div class="value">Средняя</div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 7. Бенгальская -->
+                <article class="breed-card">
+                    <div class="breed-image">
+                        <img src="https://i.imgur.com/K3d7jfP.jpeg" alt="Бенгальская кошка">
+                    </div>
+                    <h3>Бенгальская</h3>
+                    <p>Экзотическая порода с диким окрасом, активная и любознательная.</p>
+                    <div class="breed-characteristics">
+                        <div class="characteristic">
+                            <div class="label">Размер</div>
+                            <div class="value">Крупный</div>
+                        </div>
+                        <div class="characteristic">
+                            <div class="label">Шерсть</div>
+                            <div class="value">Короткая</div>
+                        </div>
+                        <div class="characteristic">
+                            <div class="label">Активность</div>
+                            <div class="value">Очень высокая</div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 8. Русская голубая -->
+                <article class="breed-card">
+                    <div class="breed-image">
+                        <img src="https://i.imgur.com/V6sTz0k.jpeg" alt="Русская голубая">
+                    </div>
+                    <h3>Русская голубая</h3>
+                    <p>Элегантная кошка с серебристо-голубой шерстью и изумрудными глазами.</p>
+                    <div class="breed-characteristics">
+                        <div class="characteristic">
+                            <div class="label">Размер</div>
+                            <div class="value">Средний</div>
+                        </div>
+                        <div class="characteristic">
+                            <div class="label">Шерсть</div>
+                            <div class="value">Короткая</div>
+                        </div>
+                        <div class="characteristic">
+                            <div class="label">Характер</div>
+                            <div class="value">Сдержанный</div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 9. Норвежская лесная -->
+                <article class="breed-card">
+                    <div class="breed-image">
+                        <img src="https://i.imgur.com/5Jq8wXt.jpeg" alt="Норвежская лесная">
+                    </div>
+                    <h3>Норвежская лесная</h3>
+                    <p>Крепкая длинношерстная порода, отлично приспособленная к холодному климату.</p>
+                    <div class="breed-characteristics">
+                        <div class="characteristic">
+                            <div class="label">Размер</div>
+                            <div class="value">Крупный</div>
+                        </div>
+                        <div class="characteristic">
+                            <div class="label">Шерсть</div>
+                            <div class="value">Длинная</div>
+                        </div>
+                        <div class="characteristic">
+                            <div class="label">Активность</div>
+                            <div class="value">Высокая</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 4: Советы по уходу -->
+    <section class="care-block" id="care">
+        <div class="container">
+            <h2 class="section-title">Советы по уходу за кошками</h2>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="care-card">
+                        <h3>🍖 Питание</h3>
+                        <p>Сбалансированный рацион - основа здоровья вашего питомца. Используйте качественные корма и следите за свежестью воды.</p>
+                        <a href="#" class="care-link">Подробнее →</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="care-card">
+                        <h3>💇‍♀️ Уход за шерстью</h3>
+                        <p>Регулярное вычесывание предотвращает образование колтунов и снижает линьку. Длинношерстных кошек расчесывайте ежедневно.</p>
+                        <a href="#" class="care-link">Подробнее →</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="care-card">
+                        <h3>🏥 Здоровье</h3>
+                        <p>Регулярные визиты к ветеринару и своевременная вакцинация - залог здоровья питомца. Следите за состоянием зубов и когтей.</p>
+                        <a href="#" class="care-link">Подробнее →</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="care-card">
+                        <h3>🏠 Комфорт</h3>
+                        <p>Создайте уютное место для отдыха, обеспечьте когтеточку и игрушки для активности. Кошки любят высоту.</p>
+                        <a href="#" class="care-link">Подробнее →</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="care-card">
+                        <h3>🎯 Воспитание</h3>
+                        <p>Начинайте воспитание с раннего возраста. Используйте положительное подкрепление, будьте последовательны.</p>
+                        <a href="#" class="care-link">Подробнее →</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="care-card">
+                        <h3>❤️ Внимание</h3>
+                        <p>Уделяйте кошке достаточно внимания, но уважайте ее личное пространство. Любовь и забота - лучшая профилактика.</p>
+                        <a href="#" class="care-link">Подробнее →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- БЛОК 5: Подвал -->
+    <footer class="footer-block" id="contact">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span>🐱</span> CatWorld
+                    </div>
+                    <p class="footer-description">
+                        Мы помогаем людям находить идеальных пушистых друзей и правильно заботиться о них.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">F</a>
+                        <a href="#" class="social-link" aria-label="Instagram">I</a>
+                        <a href="#" class="social-link" aria-label="Twitter">T</a>
+                        <a href="#" class="social-link" aria-label="YouTube">Y</a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-section">
+                    <h4 class="footer-title">Навигация</h4>
+                    <div class="footer-links">
+                        <a href="#home">Главная</a>
+                        <a href="#breeds">Породы кошек</a>
+                        <a href="#care">Советы по уходу</a>
+                        <a href="#contact">О нас</a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-section">
+                    <h4 class="footer-title">Помощь</h4>
+                    <div class="footer-links">
+                        <a href="#">FAQ</a>
+                        <a href="#">Поддержка</a>
+                        <a href="#">Политика конфиденциальности</a>
+                        <a href="#">Условия использования</a>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <h4 class="footer-title">Контакты</h4>
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span>info@catworld.ru</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <span>+7 (999) 123-45-67</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <span>Москва, ул. Кошачья, д. 15</span>
+                    </div>
+                    <a href="#home" class="back-link">↑ Наверх</a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CatWorld. Учебный проект по веб-разработке.</p>
+                <p>Все изображения взяты из открытых источников</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

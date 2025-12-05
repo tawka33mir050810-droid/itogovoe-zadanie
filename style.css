@@ -1,0 +1,472 @@
+/* CSS переменные для общего стиля */
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #4ecdc4;
+    --accent-color: #45b7d1;
+    --text-dark: #2d3436;
+    --text-light: #636e72;
+    --background: #fefefe;
+    --shadow-light: 0 5px 15px rgba(0,0,0,0.1);
+    --shadow-medium: 0 10px 30px rgba(0,0,0,0.15);
+    --shadow-heavy: 0 15px 40px rgba(0,0,0,0.2);
+    --transition-fast: 0.3s ease;
+    --transition-slow: 0.6s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background);
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* Анимации */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* БЛОК 1: Меню */
+.header-block {
+    background: linear-gradient(135deg, var(--primary-color), #ffa8a8);
+    color: white;
+    padding: 1rem 0;
+    border-bottom: 3px solid #ff4757;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    z-index: 1000;
+}
+
+.nav-menu.active {
+    display: block;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu li {
+    border-bottom: 1px solid #ff8e8e;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* БЛОК 2: Герой-секция */
+.hero-block {
+    background: linear-gradient(135deg, #a8e6cf, #dcedc1);
+    padding: 4rem 0;
+    border-bottom: 3px solid #7bed9f;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all var(--transition-fast);
+}
+
+.btn:hover {
+    background-color: #ff4757;
+    transform: translateY(-3px);
+}
+
+/* БЛОК 3: Породы кошек */
+.breeds-block {
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+    padding: 4rem 0;
+    border-bottom: 3px solid var(--text-dark);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.breeds-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.breed-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: var(--shadow-light);
+    text-align: center;
+    transition: all var(--transition-fast);
+}
+
+.breed-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.breed-image {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.breed-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all var(--transition-slow);
+}
+
+.breed-card:hover .breed-image img {
+    transform: scale(1.1);
+}
+
+.breed-card h3 {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+    font-size: 1.5rem;
+}
+
+.breed-characteristics {
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.characteristic {
+    text-align: center;
+}
+
+.characteristic .label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+.characteristic .value {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+/* БЛОК 4: Советы по уходу */
+.care-block {
+    background: linear-gradient(135deg, #ffeaa7, #fdcb6e);
+    padding: 4rem 0;
+    border-bottom: 3px solid #e17055;
+}
+
+.care-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow-light);
+    text-align: center;
+    transition: all var(--transition-fast);
+    height: 100%;
+}
+
+.care-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.care-card h3 {
+    color: #e17055;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.care-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* БЛОК 5: Подвал */
+.footer-block {
+    background: linear-gradient(135deg, #2d3436, #1a1a1a);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-brand {
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.social-link:hover {
+    background: var(--primary-color);
+}
+
+.footer-links-section {
+    text-align: center;
+}
+
+.footer-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-links a {
+    color: #b2bec3;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #b2bec3;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #4a4a4a;
+    padding-top: 1.5rem;
+    text-align: center;
+    color: #b2bec3;
+    font-size: 0.9rem;
+}
+
+/* МЕДИА-ЗАПРОСЫ ДЛЯ АДАПТИВНОСТИ */
+
+/* Планшеты (768px и выше) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .nav-toggle {
+        display: none;
+    }
+    
+    .nav-menu {
+        display: block;
+        position: static;
+        width: auto;
+        background: none;
+    }
+    
+    .nav-menu ul {
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .nav-menu li {
+        border-bottom: none;
+    }
+    
+    .nav-menu a {
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+    }
+    
+    .nav-menu a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .breeds-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-main {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+/* Ноутбуки (992px и выше) */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .breeds-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .footer-main {
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    }
+}
+
+/* Большие экраны (1200px и выше) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Мобильные телефоны (480px и меньше) */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .breed-card {
+        padding: 1.5rem;
+    }
+    
+    .breed-characteristics {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .care-card {
+        padding: 1.5rem;
+    }
+}
