@@ -721,8 +721,80 @@ a:focus, button:focus {
     .characteristic .label {
         font-size: 0.8rem;
     }
-    
+    /* ========== ИСПРАВЛЕНИЕ ДЛЯ КНОПКИ "НАЗАД" ========== */
+
+/* Исправление цвета кнопки "Назад к заданиям" */
+.back-link {
+    background-color: #ff6b6b !important; /* Красный фон */
+    color: white !important; /* Белый текст */
+    padding: 0.7rem 1.5rem !important;
+    border-radius: 25px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    display: inline-block !important;
+    margin-top: 1rem !important;
+    transition: all 0.3s ease !important;
+    border: 2px solid white !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+}
+
+.back-link:hover {
+    background-color: #ff4757 !important; /* Темнее при наведении */
+    transform: translateY(-3px) !important;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3) !important;
+    color: white !important;
+}
+
+.back-link:active {
+    transform: translateY(-1px) !important;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 576px) {
+    .back-link {
+        width: 100% !important;
+        max-width: 250px !important;
+        text-align: center !important;
+        margin: 1rem auto 0 !important;
+        display: block !important;
+    }
+}
+
+/* Улучшение видимости текста в подвале */
+.contact-info {
+    color: white;
+}
+
+.contact-info .footer-title {
+    color: #ff6b6b;
+    margin-bottom: 1.5rem;
+}
+
+/* Улучшение контрастности текста в подвале */
+.footer-description,
+.contact-item,
+.footer-links a {
+    color: #e0e0e0 !important;
+}
+
+.footer-links a:hover {
+    color: #ff6b6b !important;
+}
+
+/* Улучшение социальных иконок */
+.social-link {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    color: white !important;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #ff6b6b !important;
+    transform: translateY(-3px);
+}
     .characteristic .value {
         font-size: 0.9rem;
     }
 }
+
